@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="navbar">
+    <!-- Navbar-innhold -->
+
+    <nav class="navbar">
+        <a class="navbar-left"  th:href="@{/}">
+            <img src="/images/logo.webp" alt="Skillio Logo" class="logo">
+        </a>
+        <div class="navbar-right">
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/login">Log in</a>
+        </div>
+    </nav>
+    <div class="divider"></div>
+</div>
+</body>
+</html>

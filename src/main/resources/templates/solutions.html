@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Våre løsninger | Skillio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="icon" type="image/webp" href="/favicon.webp">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<header class="solutions-hero text-center">
+  <div class="container py-5">
+    <h1 class="display-4">Våre løsninger</h1>
+    <p class="lead">Skillio gjør det enkelt å lære og undervise – tilpasset din organisasjon.</p>
+  </div>
+</header>
+
+<section class="container py-5">
+  <h2 class="mb-4 text-center">Hvem passer Skillio for?</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="solution-card text-center">
+        <i class="bi bi-briefcase-fill icon mb-3"></i>
+        <h4>Bedrifter</h4>
+        <p>Effektiv opplæring av ansatte med sporbar progresjon og tilpassede kurs.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="solution-card text-center">
+        <i class="bi bi-mortarboard-fill icon mb-3"></i>
+        <h4>Skoler & Fagskoler</h4>
+        <p>Digitale supplementer til undervisning med interaktive moduler og prøver.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="solution-card text-center">
+        <i class="bi bi-tools icon mb-3"></i>
+        <h4>Verksteder & Kursledere</h4>
+        <p>Enkel organisering og distribusjon av opplæring før praktiske kursdager.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <h2 class="mb-4 text-center">Hva kan vi hjelpe deg med?</h2>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="solution-card text-center">
+        <i class="bi bi-journal-text icon mb-3"></i>
+        <h4>Strukturering av kursinnhold</h4>
+        <p>Vi hjelper deg med å dele opp opplæring i tydelige moduler, quizer og læringsmål.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="solution-card text-center">
+        <i class="bi bi-file-earmark-arrow-up-fill icon mb-3"></i>
+        <h4>Import av eksisterende materiell</h4>
+        <p>Har du allerede PowerPoint, PDF eller video? Vi integrerer det sømløst inn i Skillio.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="solution-card text-center">
+        <i class="bi bi-person-gear icon mb-3"></i>
+        <h4>Brukertilpasset tilgang</h4>
+        <p>Skreddersy roller og tilgang for elever, instruktører og ledelse.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="solution-card text-center">
+        <i class="bi bi-bar-chart-line-fill icon mb-3"></i>
+        <h4>Statistikk og innsikt</h4>
+        <p>Følg progresjon og resultater med detaljerte rapporter og varslinger.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner text-center py-5">
+  <h2>Bli en del av Skillio i dag</h2>
+  <p>Start gratis, og se hvordan plattformen kan tilpasses dine behov.</p>
+  <a href="/register" class="btn btn-primary">Kom i gang</a>
+</section>
+
+</body>
+</html>

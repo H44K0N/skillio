@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Logg inn</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="/favicon.webp">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+<div class="login-box">
+<h2>Logg inn</h2>
+<form method="post" th:action="@{/login}">
+  <input type="text" name="username" placeholder="Brukernavn" required>
+  <input type="password" name="password" placeholder="Passord" required>
+  <button type="submit">Logg inn</button>
+</form>
+<div th:if="${param.error}" class="login-error">
+  Feil brukernavn eller passord.
+</div>
+</div>
+
+</body>
+</html>

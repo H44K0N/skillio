@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Kursoversikt</title>
+</head>
+<body>
+<h1>Alle kurs</h1>
+<a href="/courses/new">Opprett nytt kurs</a>
+<ul>
+  <li th:each="course : ${courses}">
+    <strong th:text="${course.title}">Tittel</strong><br>
+    <span th:text="${course.description}">Beskrivelse</span><br>
+    <a th:href="@{'/courses/' + ${course.id} + '/modules'}">Vis moduler</a>
+  </li>
+</ul>
+</body>
+</html>

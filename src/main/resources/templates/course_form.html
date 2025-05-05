@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Opprett nytt kurs</title>
+</head>
+<body>
+<h1>Opprett nytt kurs</h1>
+<form th:action="@{/courses}" method="post">
+  <label for="title">Tittel:</label><br>
+  <input type="text" id="title" name="title"><br><br>
+
+  <label for="description">Beskrivelse:</label><br>
+  <textarea id="description" name="description"></textarea><br><br>
+
+  <button type="submit">Opprett kurs</button>
+</form>
+</body>
+</html>
