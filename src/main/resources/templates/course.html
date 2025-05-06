@@ -13,7 +13,20 @@
     <h1 th:text="${course.title}">Kurstittel</h1>
     <img th:src="${course.imageUrl}" alt="Kursbilde" class="img-fluid mb-3" style="max-width: 300px;">
     <p th:text="${course.description}">Beskrivelse</p>
-    <!-- Her kan du legge til f.eks. modulvisning senere -->
+
+    <hr>
+
+    <h3>Seksjoner i dette kurset</h3>
+    <div class="row g-4 mt-3">
+        <div class="col-md-6" th:each="section : ${course.sections}">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${section.title}">Seksjonstittel</h5>
+                    <a th:href="@{/sections/{id}(id=${section.id})}" class="btn btn-outline-primary mt-3">Start seksjon</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>

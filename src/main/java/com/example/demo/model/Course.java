@@ -18,10 +18,9 @@ public class Course {
     private String imageUrl;
 
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
-    private List<Module> modules;
+    private List<CourseSection> sections;
 
-    public Course() {
-    }
+    public Course() {}
 
     public Course(String title, String description, String imageUrl) {
         this.title = title;
@@ -29,7 +28,6 @@ public class Course {
         this.imageUrl = imageUrl;
     }
 
-    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -46,14 +44,6 @@ public class Course {
         this.title = title;
     }
 
-    public List<Module> getModules() {
-        return modules;
-    }
-
-    public void setModules(List<Module> modules) {
-        this.modules = modules;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -68,5 +58,13 @@ public class Course {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public List<CourseSection> getSections() {
+        return sections;
+    }
+
+    public void setSections(List<CourseSection> sections) {
+        this.sections = sections;
     }
 }

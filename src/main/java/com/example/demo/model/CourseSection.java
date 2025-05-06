@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-public class Module {
+public class CourseSection {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -15,10 +15,8 @@ public class Module {
     @JoinColumn(name = "course_id")
     private Course course;
 
-    @OneToMany(mappedBy = "module", cascade = CascadeType.ALL)
-    private List<Lesson> lessons;
-
-    // Getters and setters
+    @OneToMany(mappedBy = "section", cascade = CascadeType.ALL)
+    private List<LessonPage> pages;
 
     public Long getId() {
         return id;
@@ -44,11 +42,12 @@ public class Module {
         this.course = course;
     }
 
-    public List<Lesson> getLessons() {
-        return lessons;
+    public List<LessonPage> getPages() {
+        return pages;
     }
 
-    public void setLessons(List<Lesson> lessons) {
-        this.lessons = lessons;
+    public void setPages(List<LessonPage> pages) {
+        this.pages = pages;
     }
+
 }

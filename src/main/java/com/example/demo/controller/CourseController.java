@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import com.example.demo.model.Course;
 import com.example.demo.repository.CourseRepository;

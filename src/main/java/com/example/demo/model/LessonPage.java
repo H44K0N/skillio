@@ -3,21 +3,21 @@ package com.example.demo.model;
 import jakarta.persistence.*;
 
 @Entity
-public class Lesson {
+public class LessonPage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
 
+    private String mediaUrl;
+
     @Column(columnDefinition = "TEXT")
     private String content;
 
     @ManyToOne
-    @JoinColumn(name = "module_id")
-    private Module module;
-
-    // Getters and setters
+    @JoinColumn(name = "section_id")
+    private CourseSection section;
 
     public Long getId() {
         return id;
@@ -43,11 +43,19 @@ public class Lesson {
         this.content = content;
     }
 
-    public Module getModule() {
-        return module;
+    public CourseSection getSection() {
+        return section;
     }
 
-    public void setModule(Module module) {
-        this.module = module;
+    public void setSection(CourseSection section) {
+        this.section = section;
+    }
+
+    public String getMediaUrl() {
+        return mediaUrl;
+    }
+
+    public void setMediaUrl(String mediaUrl) {
+        this.mediaUrl = mediaUrl;
     }
 }
