@@ -233,3 +233,15 @@ body, html {
     font-size: 2.5rem;
     color: rgba(179, 153, 34, 0.85); /* eller tilpass etter deres palett */
 }
+
+.card{
+    background-color: #496B77C5;
+}
+
+.course-divider{
+    border: 5px dashed #011C27;
+    border-radius: 15px;
+}
+.course-image{
+    border-radius: 50%;
+}

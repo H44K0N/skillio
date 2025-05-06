@@ -11,13 +11,13 @@
 
 <div class="container mt-5 text-center">
     <h1 th:text="${course.title}">Kurstittel</h1>
-    <img th:src="${course.imageUrl}" alt="Kursbilde" class="img-fluid mb-3" style="max-width: 300px;">
+    <img th:src="${course.imageUrl}" alt="Kursbilde" class="img-fluid mb-3 course-image" style="max-width: 150px;">
     <p th:text="${course.description}">Beskrivelse</p>
 
-    <hr>
+    <hr class="course-divider">
 
     <h3>Seksjoner i dette kurset</h3>
-    <div class="row g-4 mt-3">
+    <div class="row g-4 mt-3 justify-content-center">
         <div class="col-md-6" th:each="section : ${course.sections}">
             <div class="card h-100 shadow-sm">
                 <div class="card-body">
